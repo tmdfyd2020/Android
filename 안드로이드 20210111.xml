@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- XML 파일에 일반적으로 추가하는 정보, 이 파일이 XML 형식으로 된 것임을 알려준다. -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 화면 전체를 감싸고 있는 레이아웃에 대한 코드 부분 -->
+    <!-- xmlns:android : 안드로이드 기본 SDK에 포함되어 있는 속성을 사용함. 밑에 사용되는 android:~의 접두어로 사용된다. -->
+    <!-- ConstraintLayout은 안드로이드 SDK에 나중에 추가되면서 외부 라이브러리로 분류되어 있어 패키지 이름까지 함께 기록해야 한다. -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="102dp" />
+    <!-- Guideline 클래스는 외부 라이브러리에 들어 있어 패키지 이름을 다 적어준다. -->
+    <!-- orientation : 가이드라인이 가로인지 세로인지 방향을 결정 -->
+    <!-- layout_constraintGuide_begin : 부모 레이아웃의 벽면에서 얼마나 떨어뜨려 배치할지 지정하는 속성.
+         세로 방향인 경우 왼쪽부터, 가로 방향인 경우 위쪽부터의 거리 지정-->
+    <!-- 뷰 크기 결정시에는 dp 단위를 사용하고, 글자 크기에는 sp 단위를 사용하자! -->
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- id 값은 파일 안에서 중복되면 안된다. -->
+    <!-- layout_marginTop : 뷰의 위쪽을 얼마나 띄울지 지정 -->
+    <!-- app:layout_constraintLeft_toLeftOf=~ : 이 버튼의 왼쪽의 연결점과 타깃뷰(~)의 왼쪽 연결점을 연결하여 제약조건을 만든다. -->
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
