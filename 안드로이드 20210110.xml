@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!-- Constraintlayout은 안드로이드 SDK에 나중에 추가되면서 외부 라이브러리로 분류되어 있어서 패키지 이름까지 함께 기록해줘야 한다. -->
+<!-- Constraintlayout은 안드로이드 SDK에 나중에 추가되면서 외부 라이브러리로 분류되어 있어서 패키지 이름까지 함께 기록해줘야 한다.  -->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
