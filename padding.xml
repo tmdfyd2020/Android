@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false">
+    <!-- baselineAligned = "false" : 글자의 높이가 서로 달라진다. -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#ffff0000"
+        android:textSize="20sp"
+        android:background="#ffffff00"
+        android:padding="20dp"
+        />
+        <!-- padding : 내용물(글씨, 이미지)와 뷰 사이의 공간 -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#ffff0000"
+        android:textSize="24sp"
+        android:background="#ff00ffff"
+        android:layout_margin="10dp"
+        />
+        <!-- layout_margin : 뷰와 위젯 사이의 공간. 다른 뷰와의 거리가 생기게 된다. -->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#ffff0000"
+        android:textSize="24sp"
+        
+        android:background="#fff00fff"
+        android:padding="20dp"
+        />
+
+
+</LinearLayout>
