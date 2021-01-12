@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 리니어 레이아웃을 수직 방향으로 설정 -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 리니어 레이아웃을 수평 방향으로 설정 -->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff00"
+            android:text="텍스트"
+            android:textColor="#ffff0000"
+            android:textSize="24dp"
+            android:layout_weight="1"/>
+        <!-- weight : 부모 컨테이너에 남아 있는 여유 공간을 분할하여 뷰들에게 나눠준다. 1의 경우 1 : 1로 나눠 갖는다. -->
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff00ffff"
+            android:text="텍스트"
+            android:textColor="#ffff0000"
+            android:textSize="24dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 리니어 레이아웃을 수평 방향으로 설정 -->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff00"
+            android:text="텍스트"
+            android:textColor="#ffff0000"
+            android:textSize="24dp"
+            android:layout_weight="1"/>
+        <!-- weight : 부모 컨테이너에 남아 있는 여유 공간을 분할하여 뷰들에게 나눠준다. 1, 2의 경우 1 : 2로 나눠 갖는다.
+         남아 있는 여유 공간을 나눠 가진 것이기 때문에 노란색과 하늘색의 비율이 정확히 1 : 2는 아니다.
+         부모 컨테이너의 가로 공간 전체 자체를 1 : 2의 비율로 나눠 갖도록 하기 위해서는 layout_width 값을 0dp로 해야 한다.
+         하지만, 절대로 layout_width 값에 match_parent는 주면 안된다.-->
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff00ffff"
+            android:text="텍스트"
+            android:textColor="#ffff0000"
+            android:textSize="24dp"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 리니어 레이아웃을 수평 방향으로 설정 -->
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0"
+            android:layout_height="wrap_content"
+            android:background="#ffffff00"
+            android:text="텍스트"
+            android:textColor="#ffff0000"
+            android:textSize="24dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0"
+            android:layout_height="wrap_content"
+            android:background="#ff00ffff"
+            android:text="텍스트"
+            android:textColor="#ffff0000"
+            android:textSize="24dp"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+</LinearLayout>
