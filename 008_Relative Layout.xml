@@ -51,5 +51,5 @@
         android:text="Button" />
         
     <!-- alignParentBottom : 부모 레이아웃의 아래쪽으로 붙여라. -->
-    
+     
 </RelativeLayout>
