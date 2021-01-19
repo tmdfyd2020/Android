@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" /> <!-- 
+□ 첫 번째 버튼을 가로 방향으로 채우면서 추가
+-->
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" /> <!-- 
+□ 두 번째 버튼을 가로 방향으로 채우면서 추가
+-->
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" /> <!-- 
+□ 세 번째 버튼을 가로 방향으로 채우면서 추가
+-->
+</LinearLayout> <!-- 
+□ 위의 코드 (orientation = "vertical", button width = "match_parent")로하면 화면에 꽉찬 가로 버튼 3개가 아래로 나열된다.
+  하지만 (orientation = "horizontal", button width = "wrap_content")로하면 한 줄에 작은 크기의 버튼 3개가 오른쪽으로 나열된다.
+-->
