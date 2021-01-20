@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity">
-    
-    <!-- 
-      상대 레이아웃 사용하기
-    # 상대 레이아웃은 대부분 제약 레이아웃으로 만들 수 있기 때문에 상대 레이아웃의 사용도 자체는 떨어진다.
-    # 상대 레이아웃은 부모 컨테이너나 다른 뷰와의 상대적인 위치를 이용해 뷰의 위치를 결정할 수 있도록 한다.
+    tools:context=".MainActivity"> <!-- 
+    [ 상대 레이아웃(Relative Layout) 사용하기 ]
+    □ 규칙 기반 모델로써 부모 컨테이너나 다른 뷰와의 상대적 위치로 화면을 구성하는 방법
+    □ 상대 레이아웃은 대부분 제약 레이아웃으로 만들 수 있기 때문에 상대 레이아웃의 사용도 자체는 떨어진다.
+    □ 상대 레이아웃은 부모 컨테이너나 다른 뷰와의 상대적인 위치를 이용해 뷰의 위치를 결정할 수 있도록 한다.
     -->
 
     <Button
@@ -21,15 +20,14 @@
         android:layout_above="@+id/button2"
         android:text="Button"
         android:background="#ff0088ff"
-        android:layout_below="@+id/button3"/>
-    
-    <!-- # alignParentLeft : 부모 레이아웃의 왼쪽에 붙여라.
-         # alignParentStart : 부모 레이아웃의 시작부분에 붙여라.
-         # alignParentTop : 부모 레이아웃의 위쪽에 붙여라.
+        android:layout_below="@+id/button3"/> <!--
+        □ alignParentLeft : 부모 레이아웃의 왼쪽에 붙여라.
+        □ alignParentStart : 부모 레이아웃의 시작부분에 붙여라.
+        □ alignParentTop : 부모 레이아웃의 위쪽에 붙여라.
 
-         # layout_above 속성을 추가하고 그 값으로 두 번째 버튼의 id를 지정하면 첫 번째 버튼은 두 번째
+        □ layout_above 속성을 추가하고 그 값으로 두 번째 버튼의 id를 지정하면 첫 번째 버튼은 두 번째
            버튼의 바로 윗부분까지만 공간을 차지한다.
-         # laytou_below : 위와 같은 원리로 지정한 버튼의 아랫부분부터 공간을 차지한다. -->
+        □ laytou_below : 위와 같은 원리로 지정한 버튼의 아랫부분부터 공간을 차지한다. -->
 
     <Button
         android:id="@+id/button2"
@@ -48,8 +46,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="Button" />
-        
-    <!-- alignParentBottom : 부모 레이아웃의 아래쪽으로 붙여라. -->
+        android:text="Button" /> <!--
+        □ alignParentBottom : 부모 레이아웃의 아래쪽으로 붙여라. -->
      
 </RelativeLayout>
