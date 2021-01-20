@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="이미지 바꾸기"
+        android:onClick="onButton1Clicked" /> <!--
+    □ 화면에 있는 버튼을 누를 때마다 두 개의 이미지가 변환되는 기능을 구현한 이미지 전환 버튼
+    □ 버튼을 누를 때마다 이미지가 전환되어야 하므로 프레임 레이아웃 안에 두 개의 이미지뷰를 중첩하여 넣어준다.
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        > <!--
+     □ 위에 있는 버튼 아래에 프레임 레이아웃을 추가하여 match_parent로 설정해서 아래쪽 영역을 꽉 채우도록 만든다.
+     -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/dream1" /> <!--
+        □ 첫 번째 이미지뷰를 보이지 않도록 설정
+        -->
+        <ImageView
+            android:id="@+id/imageView2" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:srcCompat="@drawable/dream2" /> <!--
+       □ 두 번째 이미지뷰를 보이도록 설정
+       -->
+    </FrameLayout>
+</LinearLayout>
+
+<!--
+□ 한 이미지의 속성을 visible, 다른 이미지의 속성을 invisible을 설정한다.
+  하지만 굳이 이렇게 하지 않아도 프레임 레이아웃이 갖는 특성 때문에 두 번째 이미지뷰만 보인다.
+  왜냐하면 프레임 레이아웃은 먼저 추가한 뷰위에 나중에 추가한 뷰가 쌓이기 때문이다. -->
