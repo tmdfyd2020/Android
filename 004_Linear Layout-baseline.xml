@@ -3,8 +3,8 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:baselineAligned="false">
-    <!-- baselineAligned = "false" : 글자의 높이가 서로 달라진다. -->
+    android:baselineAligned="false"> <!--
+    □ baselineAligned = "false" : 글자의 높이가 서로 달라진다. -->
 
     <TextView
         android:id="@+id/textView"
@@ -13,7 +13,8 @@
         android:text="큰 글씨"
         android:textColor="#ffff0000"
         android:textSize="40sp"
-        />
+        /> <!--
+    □ 텍스트뷰의 글자 크기를 크게 -->
 
     <TextView
         android:id="@+id/textView2"
@@ -22,7 +23,8 @@
         android:text="중간 글씨"
         android:textColor="#ff00ff00"
         android:textSize="20sp"
-        />
+        /> <!--
+    □ 텍스트 글자 크기를 작게 -->
 
     <TextView
         android:id="@+id/textView3"
@@ -31,7 +33,6 @@
         android:text="작은 글씨"
         android:textColor="#ff0000ff"
         android:textSize="14sp"
-        />
-
-
+        /> <!--
+    □ 텍스트 글자 크기를 좀 더 작게 -->
 </LinearLayout>
