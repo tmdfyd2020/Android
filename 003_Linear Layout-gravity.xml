@@ -8,22 +8,22 @@
     app:layoutDescription="@xml/gravity_scene">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:text="left" />
-    <!-- layout_gravity : 뷰가 어디에 위치할 것인지를 결정해준다. -->
+        android:text="left" /> <!--
+    □ layout_gravity : 뷰가 어디에 위치할 것인지를 결정해준다. -->
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="center" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -37,12 +37,11 @@
         android:textColor="#03A9F4"
         android:textSize="32sp"
         andriod:textStyle="bold"
-        android:text="left" />
-    <!-- match_parent : 부모가 갖는 길이를 모두 채울 때 사용. 해당 레이아웃을 취하는 컨테이너의 길이를 모두 채운다. -->
-    <!-- wrap_content : 해당 뷰가 그려질 수 있도록 필요한 길이만 사용 -->
-    <!-- gravity : 뷰의 위치가 아니라 뷰의 내용물의 위치를 결정해준다. -->
-    <!-- width와 height를 둘다 wrap_content로 하면 여유 공간이 없기 때문에 gravity가 의미가 없어진다. -->
-
+        android:text="left" /> <!-- 
+    □ gravity : 뷰의 위치가 아니라 뷰의 내용물의 위치를 결정해준다.
+    □ 버튼이나 텍스트뷰의 크기를 wrap_content로 지정하면 버튼 안에 들어 있는 글자에 맞게 뷰의 크기가 결정되므로 내부의 여유 공간이 없어진다.
+      따라서 내부의 여유 공간이 없어진다. -->
+    
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
