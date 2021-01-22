@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:background="#ffff0000"> <!--
+        □ 수평 스크롤을 위한 스크롤뷰 : HorizontalScrollView
+          □ 스크롤뷰는 기본적으로 수직 방향의 스크롤을 사용.
+        □ layout_above : Linear Layout 위에 배치 ☆
+        □ layout_alignParentStart(Left) : 좌측에서 시작
+        -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"> <!--
+            □ 수직 스크롤을 우한 스크롤뷰
+            -->
+            <ImageView
+                android:id="@+id/topImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="#ff00ff00"
+        android:gravity="center"
+        android:orientation="horizontal"> <!--
+        □ layout_width="match_parent" : 수평 방향은 다 사용하기 위해
+        □ layout_height="wrap_content" : 수직 방향은 버튼 높이정도만 사용하기 위해
+        □ layout_centerVertical : 중앙 세로선에서 시작
+        □ gravity : 뷰의 위치가 아니라 뷰 안의 내용물의 위치
+        □ orientation : 내용물들을 수평으로 배치
+        -->
+
+        <Button
+            android:id="@+id/downButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDownButtonClicked"
+            android:text="Down" />
+
+        <Button
+            android:id="@+id/upButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onUpButtonClicked"
+            android:text="Up" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:background="#ff0000ff"> <!--
+        □ layout_below : 레이아웃의 하단에 위치
+        -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bottomImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+    </HorizontalScrollView>
+</RelativeLayout>
+
