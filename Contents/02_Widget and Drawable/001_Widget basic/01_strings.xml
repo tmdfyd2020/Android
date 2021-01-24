@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SampleWidget</string>
+    <string name="person_name">정승룡</string>
+</resources>
+
+<!--
+□ text 속성에 지정할 문자열을 strings.xml 파일로 분리하면 장점 : 다국어 지원이 필요할 때
+  -> 글자들만 따로 strings.xml 파일로 분리한 후 XML 레이아웃 파일에서는 strings.xml 파일 안에 있는 글자 중 하나를 참조
+-->
