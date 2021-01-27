@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/image01"
+        android:state_pressed="true"></item> <!--
+        버튼이 눌렸을 때 image01 그림
+        -->
+
+    <item android:drawable="@drawable/image02"
+        android:state_focused="true"></item> <!--
+        버튼을 가리키고 있을 때 image02 그림
+        -->
+
+    <item android:drawable="@drawable/image03">
+
+    </item>
+
+</selector>
