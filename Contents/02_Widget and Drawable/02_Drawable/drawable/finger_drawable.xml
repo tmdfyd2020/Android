@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"
+        android:drawable="@drawable/image03" /> <!--
+        □ state_ : 상태를 나타냄
+        □ state_pressed : 눌린 상태
+        □ state_focused : 포커스를 받은 상태
+        -->
+    <item android:drawable="@drawable/image02"/> <!--
+    □ 아무 상태 속성이 설정되지 않음
+    -->
+
+    <!--
+    □ activity_main.xml에 있는 손가락 모양 버튼의 background 속성을 finger_drawable로 바꿔준다.
+    □ Run을 시킨 후 activity_main.xml 파일에서 만든 손가락 이미지를 눌러서 이미지가 바뀌는 것을 확인하자.
+    -->
+
+</selector> 
