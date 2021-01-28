@@ -13,7 +13,7 @@
         android:background="@drawable/ok_btn"
         android:contentDescription="ok button"
         >
-    </ImageButton> <!--
+    </ImageButton> <!-- 
     □ 이미지 버튼은 이미지를 버튼처럼 만들고 싶을 때 사용한다.
       □ 하지만 이미지 버튼은 일반적인 버튼과 다르게 눌린 상태와 눌리지 않은 상태가 표시되지 않는다.
     -->
