@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:startColor="#7288DB"
+        android:centerColor="#AE8850"
+        android:endColor="#A54767"
+        android:angle="90"
+        android:centerY="0.5" /> <!--
+        □ gradient : 앱의 배경색에 그라데이션 효과
+        □ startColor : 시작 부분의 색상
+        □ centerColor : 가운데 부분의 색상
+        □ endColor : 끝 부분의 색상
+        -->
+
+    <corners android:radius="2dp" />
+
+    <!--
+    □  activity_main.xml에 있는 최상위 레이아웃의 background 속성을 back_drawable로 바꿔준다.
+    -->
+
+</shape>
