@@ -2,7 +2,7 @@
 [ TextView와 EditText의 다른 기능들 ]
 
 -> TextView와 EditText는 View를 상속받아서 만들어진 것이다. View의 기능 중 일부를 보도록 하자.
-
+ 
 □ 커서 관련 속성
   □ selectAllOnFocus="true" : 포커스를 받을 때 문자열 전체가 선택된다. 전체에서 마지막 커서로 바꾸고 싶으면 방향키를 눌러주면 된다.
   □ cursorVisible="true" : 커서를 보이도록 한다.
