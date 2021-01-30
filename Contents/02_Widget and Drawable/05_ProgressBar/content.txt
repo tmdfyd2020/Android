@@ -1,0 +1,7 @@
+[ 프로그레스바 ]
+
+○ 일의 진행 상태를 중간 중간 보여줄 수 있는 가장 좋은 방법
+○ 막대 모양 : <ProgressBar>
+  ○ 값의 최대 범위 : max, 현재 값 : progress
+  ○ void setProgress(int progress) : 정수 값을 받아 프로그레스바의 현재 값으로 설정
+  ○ void incrementProgressBy(int diff) : 현재 설정되어 있는 값을 기준으로 값을 더하거나 뺼 때
