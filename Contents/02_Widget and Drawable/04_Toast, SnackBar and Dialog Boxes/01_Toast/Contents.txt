@@ -1,0 +1,16 @@
+< 토스트 >
+○ 간단한 메시지를 잠깐 보여주었다가 없어지는 뷰
+○ 앱 위에 떠 있는 뷰
+○ 대화상자와 함께 사용자에게 필요한 정보를 알려주는 역할
+
+< 토스트 띄우기 >
+○ Toast.makeText(Context context, String message, int duration).show();
+  ○ Context : 액티비티를 참조할 수 없는 경우에는 getApplicationContext() 메서드를 호출하면 Context 객체가 반환된다.
+
+< 토스트 위치 바꾸기 >
+○ public void setGravity(int gravity, intxOffset, intyOffset)
+  ○ 토스트 뷰가 보이는 위치를 지정하는데 사용
+  ○ gravity : 정렬 위치를 지정
+  
+○ public void setMargin(float horizontalMargin, float verticalMargin)
+  ○ 외부 여백을 지정하는 것으로 값을 이용해 토스트를 중앙이나 우측 하단에 배치
