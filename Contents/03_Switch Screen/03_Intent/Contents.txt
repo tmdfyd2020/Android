@@ -1,0 +1,36 @@
+Intent
+○ android.content 패키지 안에 정의됨
+○ 앱 구성 요소 간에 작업 수행을 위한 정보를 전달하는 역할 ☆☆☆
+○ 메서드
+  ○ startActivity() OR startActivityForResult() : 액티비티를 화면에 띄울 때 사용
+  ○ startService() : 서비스를 시작 할 때
+  ○ broadcastIntent() : Intent 객체를 브로드캐스팅 방식으로 전송할 때
+○ 기본 구성요소 : Action(수행할 기능) + Data(Action이 수행될 대상의 데이터)
+  ○ e.g.
+    ○ ACTION_DIAL tel:01012341234 : 주어진 전화번호를 이용해 전화걸기 화면을 보여줌
+    ○ ACTION_VIEW tel:01012341234 : 주어진 전화번호를 이용해 전화걸기 화면을 보여줌. URI 값의 유형에 따라 VIEW 액션이 다른 기능을 수행함
+    ○ ACTION_EDIT content://contacts/people/2 : 전화번호부 데이터베이스에 있는 정보 중에서 ID 값이 2인 정보를 편집하기 위한 화면을 보여줌
+    ○ ACTION_VIEW content://contacts/people : 전화번호부 데이터베이스의 내용을 보여줌.
+    
+○ Intent의 생성자
+  ○ Intent()
+  ○ Intent(Intent o)
+  ○ Intent(String action [, Uri uri])
+  ○ Intent(Context packageContext, Class<?> cls)
+  ○ Intent(String action, Uri uri, Context packageCOntext, Class<?> cls)
+
+○ 암시적 인텐트(Implicit Intent) : Action과 Data를 지정하긴 했지만 호출할 대상이 달라질 수 있는 경우
+○ 여러가지 속성
+  ○ 범주 (Category)
+    ○ 액션이 실행되는데 필요한 추가적인 정보를 제공한다.
+    ○ e.g. CATEGORY_LAUNCHER : 최상위 앱으로 설치된 앱들의 목록을 보여주는 애플리케이션 런처 화면에 이 앱을 보여줘야 한다는 것을 의미한다.
+    
+  ○ 타입 (Type)
+    ○ Intent에 들어가는 데이터의 MIME 타입을 명시적으로 지정한다.
+    
+  ○ 컴포넌트 (Component)
+    ○ Intent에 사용될 컴포넌트 클래스 이름을 명시적으로 지정한다. 보통 이 정보는 Intent의 다른 정보를 통해 결정된다.
+    
+  ○ 부가 데이터 (Extra Data)
+    ○ Intent는 추가적인 정보를 넣을 수 있도록 Bundle 객체를 담고 있다. 이 객체를 통해 Intent 안에 더 많은 정보를 넣어 다른 앱 구성 요소에 전달할 수 있다.
+    ○ e.g. 이메일을 보내는 Action이 있다면 이메일에 들어갈 제목, 내용 등을 부가 데이터로 넣어 전달해야 이메일 앱이 그 데이터를 받아 처리할 수 있다.
