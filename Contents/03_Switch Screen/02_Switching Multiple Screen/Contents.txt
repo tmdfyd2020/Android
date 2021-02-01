@@ -1,0 +1,16 @@
+액티비티 간 화면 전환 과정
+
+1. 새로운 Activity 만들기
+ ○ 새로운 Activity를 추가하면 XML Layout 파일 하나와 java 소스 파일 하나가 만들어지고, Manifest 파일에 Activity 태그가 추가됩니다.
+ 
+2. 새로운 Activity의 XML Layout 정의하기
+ ○ 새로 만들어진 XML Layout을 수정하여 새로운 Activity 화면이 어떻게 배치될지를 작성합니다.
+ 
+3. Main Activity에서 새로운 Activity 띄우기
+ ○ Main Activity의 버튼을 클릭하면 startActivityForResult() 메서드로 새로운 Activity를 띄웁니다.
+ 
+4. 새로운 Activity에서 응답 보내기
+ ○ 새로운 Activity가 보이고 그 안에 들어 있는 버튼을 클릭하면 setResult() 메서드로 응답을 보냅니다.
+ 
+5. 응답 처리하기
+ ○ Main Activity에서 onActivityResult() 메서드를 재정의하여 새로 띄웠던 Activity에서 보내오는 응답을 처리한다.
