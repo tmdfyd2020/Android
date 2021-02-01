@@ -1,0 +1,41 @@
+< Intent와 Bundle의 차이 >
+○ Intent : 어플리케이션 구성요소 간에 작업 수행을 위한 정보를 전달하는 역할
+
+○ Bundle : 문자열로 된 키와 여러가지 타입의 값을 저장하는 일종의 Map 클래스
+  ○ 안드로이드에서 Activity 간에 데이터를 주고 받을 때 Bundle 클래스를 사용하여 여러 가지의 데이터를 전송한다.
+
+< 플래그 >
+
+○ Activity는 Activity Manager라는 객체에 의해 Activity Stack이라는 것으로 관리된다.
+|
+○ 새로운 Activity를 만들어서 Manifest 파일에 등록하면 그 Activity는 startActivity() 또는 startActivityForResult() 메서드를 사용해 실행된다.
+|
+○ 만약 동일한 Activity를 여러 번 실행한다면 동일한 Activity가 스택에 들어가게 되고 동시에 데이터를 여러 번 접근하거나 리소스를 여러 번 사용하는 문제가 발생한다.
+|
+○ 플래그가 이러한 문제를 해결
+  ○ FLAG_ACTIVITY_SINGLE_TOP : Activity를 생성할 때 이미 생성된 Activity가 있으면 그 Activity를 그대로 사용하라는 플래그
+  ○ FLAG_ACTIVITY_NO_HISTORY : 처음 이후에 실행된 Activity는 Activity 스택에 추가되지 않는다. 처음에 실행되었던 Activity가 바로 보이게 된다.
+    ○ 알람 이벤트가 발생하여 사용자에게 한 번 알림 화면을 보여주고 싶을 때 유용하게 사용된다.
+  ○ FLAG_ACTIVITY_CLEAR_TOP : 이 Activity 위에 있는 다른 Activity를 모두 종료시킨다.
+    ○ 홈 화면과 같이 다른 Activity보다 항상 우선하는 Activity를 만들 때 유용하게 사용된다.
+    ○ 홈 화면이 하나일 경우 FLAG_ACTIVITY_SINGLE_TOP 플래그와 함께 설정하면 항상 하나의 객체가 메모리에 존재하면서 그 상위의 Activity를 모두 종료시킬 수 있다.
+
+○ Activity가 이미 메모리에 객체로 만들어져 있고, 그것을 다시 사용한다면 onCreate() 메서드가 호출되지 않는다.
+  따라서 onNewIntent() 메서드를 재정의하여 사용해야 한다. onNewIntent() 메서드는 Activity가 이미 객체로 만들어져 있을 때 시스템으로부터 자동으로 호출된다.
+
+< 부가 데이터 >
+  
+○ 안드로이드에서는 static 키워드를 통한 변수 참조가 불가능할 수도 있기 때문에 부가 데이터를 넣어 전달하는 방법을 권장한다.
+○ Intent 안에 Bundle 객체가 있는데, Bundle 객체는 해시 테이블과 유사해서 putExtra()와 getOOOExtra() 메서드로 데이터를 넣거나 뺄 수 있다. (OOO은 기본 자료형)
+○ e.g. 문자열을 넣고 싶으면 putExtra(), 문자열을 다시 빼내고 싶으면 getStringExtra()
+○ 이처럼 Bundle 객체 안에 넣은 데이터를 부가 데이터라고 한다.
+
+○ 전달하고 싶은 데이터가 기본 자료형이 아닌 객체 자료형일 경우에는 Parcelable 인터페이스(Serializable 인터페이스와 유사)를 권장한다.
+  ○ 이 인터페이스를 사용하면 객체를 직접 Bundle에 추가하여 데이터를 전송할 때 사용할 수 있다.
+  ○ 두 가지 메서드를 모두 구현해야 한다.
+    ○ public abstract int describeContents() : 직렬화하려는 객체의 유형을 구분할 때 사용한다.
+    ○ public abstract void writeToParcel(Parcel dest, int flags) : 객체가 가지고 있는 데이터를 Parcel 객체로 만들어주는 역할
+  ○ 두 메서드를 모두 구현한 다음에는 CREATOR라는 상수를 만들어야 하는데, 이 상수는 Parcel 객체로부터 데이터를 읽어 들여 객체를 생성하는 역할을 합니다.
+    ○ 이 객체는 상수로 정의되고 반드시 static final로 선언되어야 한다.
+    
+    
