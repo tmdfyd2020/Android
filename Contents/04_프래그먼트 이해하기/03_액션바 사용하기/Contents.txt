@@ -1,0 +1,21 @@
+○ 화면에 메뉴 기능 넣기
+  ○ 옵션 메뉴 : 시스템 [메뉴] 버튼을 눌렀을 때 나타나는 메뉴로 각 화면마다 설정할 수 있는 주요 메뉴
+  ○ 컨텍스트 메뉴 : 화면을 길게 누르면 나타나는 메뉴로 뷰에 설정하여 나타나게 할 수 있다. 텍스트뷰의 편집 상태를 바꾸거나 할 때 사용한다.
+  
+  ○ 위의 메뉴들을 액티비티에 추가하고 싶은 경우 쓰이는 함수
+    ○ public boolean onCreateOptionsMenu(Menu menu)
+    ○ public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo)
+  
+  ○ 전달된 Menu나 ContextMenu 객체를 사용하여 메뉴 아이템을 추가할 수 있는 함수
+    ○ MenuItem add(int groupId, int itemId, int order, CharSequence title)
+      ○ groupId : 아이템을 하나의 그룹으로 묶을 때 사용
+      ○ itemId : 아이템이 갖는 고유 ID 값으로, 아이템이 선택되었을 때 각각의 아이템을 구분할 때 사용
+    ○ MenuItem add(int groupId, int itemId, int order, int titleRes)
+    ○ SubMenu addSubMenu(int titleRes)
+    
+  ○ But!! 코드에서 메뉴를 추가하기보다는 XML에서 메뉴의 속성을 정의한 후 객체로 로딩하여 참조하는 것이 더 간단하다!
+  
+  ○ 컨텍스트 메뉴를 특정 뷰에 등록하고 싶을 때는 registerForContextMenu() 함수를 사용한다.
+    ○ void Activity.registerForContextMenu(View view)
+    ○ 이 함수로 컨텍스트 메뉴를 등록하면 각각의 메뉴 아이템을 선택했을 때 onContextItemSelected() 함수가 호출되므로 이 함수의 인수로 전달되는 MenuItem 객체를 사용해
+      선택된 메뉴 아이템의 정보를 확인한 후 처리할 수 있다.
