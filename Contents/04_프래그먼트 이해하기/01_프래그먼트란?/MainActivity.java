@@ -31,5 +31,5 @@ public class MainActivity extends AppCompatActivity {
         else if (index == 1) {  // 1이면 메뉴 프래그먼트가 보이게 한다.
             getSupportFragmentManager().beginTransaction().replace(R.id.container, menuFragment).commit();
         }
-    }
+    } 
 }
