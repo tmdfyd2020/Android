@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" > <!--
+    ◎ NoActionBar : 이 스타일을 적용한 액티비티에는 액션바가 만들어지지 않는다.
+      ○ 따라서 코드에서 setSupportActionBar() 함수를 호출하여 직접 액션바를 설정해야 한다. -->
+    </style>
+</resources>
