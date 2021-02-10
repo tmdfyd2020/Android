@@ -25,4 +25,4 @@
         android:icon="@android:drawable/ic_dialog_map"
         android:title="위치" />
 
-</menu>
+</menu> 
