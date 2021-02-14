@@ -1,0 +1,25 @@
+○ 안드로이드 앱을 실행하거나 앱 스토어에 올릴 때는 소스 파일이나 리소스 파일을 빌드하거나 배포하는 작업이 필요하다. -> Gradle을 사용 : 배포 도구
+○ 그래들 파일은 프로젝트 수준과 모듈 수준으로 나눠 관리하기 때문에 새로운 프로젝트를 만들면 두 개의 build.gradle 파일이 생긴다.
+○ 프로젝트 수준의 그래들을 수정하는 경우는 거의 없다. 가끔 외부 도구를 포함시키기 위해 buildscript의 dependencies 안에 classpath를 추가하는 정도의 수정만 있다.
+
+
+[ 꼭 필요한 build.gradle 세부 설명 ]
+
+○ android {
+    complieSdkVersion 29 >> 빌드를 진행할 때 어떤 버전의 SDK를 사용할 것인지 지정한다. 
+    defaultConfig {
+      applicationId "org.techtown.permission2" >> 이 앱의 id이다. 앱이 id 값으로 구분되기 때문에 전 세계에서 유일한 값으로 설정되어야 한다.
+      minSdkVersion 15 >> 이 앱의 어떤 하위 버전까지 지원하도록 할 것인지 지정한다.
+      targetSdkVersion 29 >> 이 앱이 검증된 버전이 어떤 SDK 버전인지를 지정한다.
+    }
+  }
+  
+○ dependencies {  >> 외부 라이브러리를 추가할 수 있다.
+    ~~~
+    
+    implementation 'com.github.~~~~' >> 개발자가 직접 추가한 외부 라이브러리
+    
+
+○ settings.gradle 파일 : 어떤 모듈을 포함할 것인지에 대한 정보
+○ local.properties 파일 : 현재 사용하고 있는 PC에 설치된 SDK의 위치가 기록되어 있음
+○ gradle.properties 파일 : 메모리 설정
