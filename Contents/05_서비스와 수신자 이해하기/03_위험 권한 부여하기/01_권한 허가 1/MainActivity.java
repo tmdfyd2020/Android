@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void checkPermissions(String[] permissions) {
         ArrayList<String> targetList = new ArrayList<String>();
-
+ 
         for (int i = 0; i < permissions.length; i++) {
             String curPermission = permissions[i];
             int permissionCheck = ContextCompat.checkSelfPermission(this, curPermission);  // 권한이 부여되어 있는지 확인
