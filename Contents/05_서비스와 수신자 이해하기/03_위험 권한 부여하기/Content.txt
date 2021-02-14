@@ -1,0 +1,33 @@
+○ 마시멜로(API 23)부터는 중요한 권한들을 분류하여 설치 시점이 아니라 앱을 실행했을 때 사용자로부터 권한을 부여받도록 변경되었다.
+
+[ 일반 권한과 위험 권한의 차이점 알아보기 ]
+
+○ 위험 권한 그룹의 분류와 세부 권한
+  ○ 1) LOCATION
+    ○ ACCESS_FINE_LOCATION
+    ○ ACCESS_COARSE_LOCATION
+  ○ 2) CAMERA
+    ○ CAMERA
+  ○ 3) MICROPHONE
+    ○ RECORD_AUDIO
+  ○ 4) PHONE
+    ○ READ_PHONE_STATE
+    ○ CALL_PHONE
+    ○ READ_CALL_LOG
+    ○ WRITE_CALL_LOG
+    ○ ADD_VOICEMAIL
+    ○ USE_SIP
+    ○ PROCESS_OUTGOING_CALLS
+  ○ 5) SMS
+    ○ SEND_SMS
+    ○ RECEIVE_SMS
+    ○ READ_SMS
+    ○ RECEIVE_WAP_PUSH
+    ○ RECEIVE_MMS
+  ○ 6) CALENDAR
+    ○ READ_CALENDAR
+    ○ WRITE_CALENDAR
+  ○ 7) SENSORS
+    ○ BODY_SENSORS
+  ○ 8) READ_EXTERNAL_STORAGE : SD 카드에 접근
+    ○ WRITE_EXTERNAL_STORAGE
