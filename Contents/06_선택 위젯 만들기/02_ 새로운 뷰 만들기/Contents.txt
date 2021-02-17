@@ -1,0 +1,9 @@
+- 새로운 뷰 만들기 -
+
+○ 우리가 원하는 기능을 가진 위젯을 따로 구상해야 할 때는 새로운 뷰나 위젯을 만들어야 한다.
+○ API에서 제공하는 뷰를 사용하려면 API의 뷰를 상속해야 한다. 뷰의 영역과 크기는 그 뷰를 포함하고 있는 레이아웃의 영향을 받아 정해진다.
+  이때 개발자가 뷰의 상태에 따라 추가적인 코드를 넣을 수 있도록 콜백 메서드가 호출된다.
+  ○ public void onMeasure (int widthMeasureSpec, int heightMeasureSpec) : 뷰가 스스로의 크기를 정할 때 자동으로 호출되는 메서드
+    ○ widthMeasureSpec, heightMeasureSpec는 레이아웃에서 뷰에게 허용하는 여유 공간의 폭과 높이에 대한 정보
+    ○ 뷰를 담고 있는 레이아웃에게 이 뷰의 크기 값을 반환하려면 -> void setMeasuredDimension (int measuredWidth, int measuredHeight) 메서드 사용
+  ○ public void onDraw (Canvas canvas) : 스스로를 레이아웃에 맞게 그릴 때 자동 호출되는 메서드
