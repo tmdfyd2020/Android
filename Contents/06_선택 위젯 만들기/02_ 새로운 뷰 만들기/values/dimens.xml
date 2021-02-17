@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">16sp</dimen>
+</resources>
+<!-- dimens.xml 파일은 크기 값 등을 정의할 수 있는 파일이다. -->
+<!-- <dimen> 태그를 추가하고 dp, sp 또는 다른 단위의 크기 값을 정의하면 소스 코드에서 그 값을 참조할 수 있다. -->
