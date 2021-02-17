@@ -7,3 +7,10 @@
     ○ widthMeasureSpec, heightMeasureSpec는 레이아웃에서 뷰에게 허용하는 여유 공간의 폭과 높이에 대한 정보
     ○ 뷰를 담고 있는 레이아웃에게 이 뷰의 크기 값을 반환하려면 -> void setMeasuredDimension (int measuredWidth, int measuredHeight) 메서드 사용
   ○ public void onDraw (Canvas canvas) : 스스로를 레이아웃에 맞게 그릴 때 자동 호출되는 메서드
+
+○ onDraw() 함수와 invalidate() 함수 이해하기
+  ○ 새로운 뷰를 클래스로 정의하고 그 안에 onDraw() 함수를 다시 정의한 후 필요한 코드를 넣어 기능을 구현하면 다른 모양으로 보이는 뷰를 만들 수 있다. 
+  ○ onDraw() 함수는 새로 정의한 뷰가 화면에 보이기 전에 호출되므로 이 함수 안에서 원하는 모양의 그래픽을 화면에 그리면 그 모양대로 화면에 표현할 수 있다.
+  □ 손가락으로 터치하여 화면에 그려진 뷰를 이동시키려고 할 때는 뷰가 이동한 후에 그 뷰를 그래픽을 다시 그려야 할 필요가 있는데 이때 invalidate() 함수를 호출하면 된다.
+  □ invalidate() 함수가 호출되면 자동으로 onDraw() 함수가 호출되어 이동한 좌표에 뷰의 그래픽을 다시 그리도록 만들 수 있다.
+  
