@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="10000"
+        /> <!--
+        ○ 한 바퀴 회전시키려면 : fromDegrees="0" -> toDegrees="360"
+        ○ 시계 반대 방향으로 회전시키려면 : fromDegrees="0" -> toDegrees="-360"
+        ○ pivotX, pivotY : 중심점 설정, 좌표 값 또는 백분율(%)을 사용할 수 있다.
+        -->
+</set>
