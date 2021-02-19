@@ -1,0 +1,13 @@
+- 시크바 사용하기 -
+
+○ 시크바는 프로그레스바를 확장하여 만든 것이다.
+  ○ 프로그레스바의 속성을 갖고 있으면서 사용자가 값을 조정할 수 있도록 한다.
+  ○ 시크바의 일부분을 터치하면 터치한 부분으로 즉시 이동할 수 있는 방법을 제공하며, 가운데 핸들을 드래그하여 좌우로 이동시킬 수 있다.
+  
+○ e.g. 동영상 재생 시 볼륨 조절, 재생 위치 조절
+
+○ OnSeekBarChangedListener라는 리스너를 설정하여 이벤트를 처리할 수 있다.
+  ○ void onStartTrackingTouch (SeekBar seekBar)
+  ○ void onStopTrackingTouch (SeekBar seekBar)
+  ○ void onProgressChanged (SeekBar seekBar, int progress, boolean fromUser) : 사용자에 의해 변경된 progress 값을 전달받을 수 있다.
+    ○ fromUser : 변경된 값이 사용자가 입력한 것인지 아니면 코드에서 변경된 것인지 구별할 수 있다.
