@@ -1,0 +1,12 @@
+- 키패드 제어하기 -
+
+○ inputType 속성
+  ○ number : 숫자
+  ○ numberSigned : 0보다 큰 숫자
+  ○ numberDecimal : 정수
+  ○ text : 텍스트
+  ○ textPassword : 패스워드로 표시
+  ○ textEmailAddress : 이메일로 표시
+  ○ phone : 전화번호로 표시
+  ○ time : 시간
+  ○ date : 날짜
