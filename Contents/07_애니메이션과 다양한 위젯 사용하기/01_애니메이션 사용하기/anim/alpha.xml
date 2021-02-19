@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="10000"
+        /> <!--
+        ○ when? 대상을 천천히 보이게 하거나 보이지 않게 하고 싶을 때, 하나의 뷰 위에 다른 뷰를 겹쳐 보이게 할 때 사용
+        ○ 0.0(완전히 투명한 상태) <= Alpha <= 1.0(완전히 보이는 상태)
+        -->
+</set>
