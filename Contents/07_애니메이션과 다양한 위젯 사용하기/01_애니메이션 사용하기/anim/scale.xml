@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale
+        android:duration="2500"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:toXScale="2.0"
+        android:toYScale="2.0"
+        /> <!--
+        ○ startOffset : 애니메이션이 시작한지 얼마 후 이 액션이 수행될 것인지
+          startOffset을 지정하지 않으면 애니메이션은 바로 시작된다.
+        ○ duration : 애니메이션 지속 시간 >> 2500ms = 2.5초
+        ○ scale : 대상을 확대하거나 축소할 때 사용
+        ○ pivotX, pivotY : 크기를 변경하려는 축의 정보 X축, Y축
+        ○ fromXScale, fromYScale : 시작할 때의 확대/축소 비율
+        ○ toXScale, toYScale : 끝날 때의 확대/축소 비율. 여기에선 2배로 확대된다. -->
+</set>
