@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="0%p"
+        android:toXDelta="-100%p"
+        android:duration="20000"
+        android:repeatCount="-1"
+        android:fillAfter="true"
+        /> <!--
+        ○ 위치 이동 액션 => <translate>
+          ○ fromXDelta, fromYDelta : 시작 위치
+          ○ toXDelta, toYDelta : 종료 위치
+
+          ○ fromXDelta 0%p -> toXDelta -100%p
+            >> 원래 위치의 X 좌표에서 대상의 크기만큼 왼쪽으로 이동한다.
+          ○ duration : 지속시간 : 20000 : 20초
+          ○ repeatCount=-1 : 무한 반복
+          ○ fillAfter=true : 애니메이션이 끝난 후에 대상이 원래의 위치로 돌아오는 것을 막음 -->
+</set>
