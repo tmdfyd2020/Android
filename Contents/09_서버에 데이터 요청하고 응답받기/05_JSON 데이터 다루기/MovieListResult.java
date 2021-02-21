@@ -9,6 +9,6 @@ public class MovieListResult {
     String totCnt;
     String source;
 
-    ArrayList<Movie> movieList = new ArrayList<Movie>();
+    ArrayList<Movie> dailyBoxOfficeList = new ArrayList<Movie>();
 
 }
