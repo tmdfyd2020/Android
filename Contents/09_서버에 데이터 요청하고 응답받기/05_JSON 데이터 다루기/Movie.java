@@ -1,21 +1,25 @@
-package org.techtown.request;
+package org.techtown.movie;
 
 public class Movie {
 
+    String rnum;
+    String rank;
+    String rankInten;
+    String rankOldAndNew;
     String movieCd;
     String movieNm;
-    String movieNmEn;
-    String prdtYear;
     String openDt;
-    String typeNm;
-    String prdtStatNm;
-    String nationAlt;
-    String genreAlt;
-    String repNationNm;
-    String repGenrmNm;
-    String directors;
-    String companys;
-    String companyCd;
-    String companyNm;
+    String salesAmt;
+    String salesShare;
+    String salesInten;
+    String salesChange;
+    String salesAcc;
+    String audiCnt;
+    String audiInten;
+    String audiChange;
+    String audiAcc;
+    String scrnCnt;
+    String showCnt;
+
 }
 
