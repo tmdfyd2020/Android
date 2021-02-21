@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
           // parameter 2 : 어떤 클래스인지를 저장하기 위한 클래스 객체
           // 이렇게 변환하면 응답 JSON에 들어있는 영화 정보의 개수를 바로 확인할 수 있다.
 
-        println("영화정보의 수 : " + movieList.movieListResult.movieList.size());
+        println("영화정보의 수 : " + movieList.boxOfficeResult.dailyBoxOfficeList.size());
     }
 
 }
