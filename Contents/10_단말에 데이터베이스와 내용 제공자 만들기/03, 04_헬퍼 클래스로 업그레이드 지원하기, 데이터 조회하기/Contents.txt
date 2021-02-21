@@ -1,0 +1,70 @@
+- 헬퍼 클래스로 업그레이드 지원하기 -
+
+○ SQLiteOpenHelper : 데이터베이스를 만들거나 열기 위해 필요한 작업들을 도와주는 역할
+
+○ 헬퍼 클래스를 사용하려면 SQLiteOpenHelper 클래스를 사용해야 한다.
+  public SQLiteOpenHelper (Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
+  ○ parameter 1 : Context 객체, 액티비티 안에서 만들 경우에는 this로 지정할 수 있다.
+  ○ parameter 2 : 데이터베이스 이름
+  ○ parameter 3 : 데이터 조회 시에 반환하는 커서를 만들어 낼 CursorFactory 객체
+  ○ parameter 4 : 데이터베이스 업그레이드를 위해 사용하는 정수 타입의 버전 정보.
+                  기존에 생성되어 있는 데이터베이스의 버전 정보와 다르게 지정하여 데이터베이스의 스키마나 데이터를 바꿀 수 있다.
+                  
+○ SQLiteOpenHelper 객체는 데이터베이스를 만들거나 열기 위해 필요한 작업을 도와주는 역할을 한다.
+    즉, SQLiteOpenHelper 객체를 만든다고 데이터베이스 파일이 바로 만들어지는 것은 아니다.
+      데이터베이스 파일이 만들어지도록 하려면 getReadableDatabase() 또는 getWritableDatabase() 메서드를 호출해야 한다.
+○ 헬퍼 클래스를 이용할 때 장점은 데이터베이스가 만들거나 업그레이드할 때 콜백 메서드가 호출된다는 점이다.
+    따라서 데이터베이스 생성, 업그레이드 등 여러 가지 상태에 따라 콜백 메서드를 다시 정의하면 각각의 상태에 맞게 처리할 수 있다.
+  ○ public abstract void onCreate (SQLiteDatabase db) : 데이터베이스가 생성될 때 호출됨
+  ○ public abstract void onOpen (SQLiteDatabase db) : 데이터베이스를 열 때 호출됨
+  ○ public abstract void onUpgrade (SQLiteDatabase db, int oldVersion, intnewVersion) : 데이터베이스를 업그레이드할 때 호출됨
+  
+- 데이터 조회하기 -
+
+○ SQL문을 이용해 쿼리를 실행한 후 결과 값으로 반환받는 Cursor 객체는 결과 테이블에 들어있는 각각의 레코드를 순서대로 접근할 수 있는 방법을 제공한다.
+  Cursor 객체는 처음에는 아무런 레코드를 가리키지 않으며, moveToNext() 메서드를 이용해 그다음 레코드를 가리키도록 해야 레코드 값을 가져올 수 있다.
+  
+○ [ API ]
+  - 칼럼에 대한 정보를 알아보기 위한 메서드
+  public abstract int getColumnCount() : 칼럼의 전체 개수 알아내기
+  public abstract int getColumnIndex(String columnName) : 각각의 칼럼이 어떤 인덱스 값으로 확인할 수 있는지 알아내기
+  public abstract String getColumnName(int columnIndex) : 모든 칼럼의 이름을 알아내기
+  public abstract String[] getColumnNames()
+  
+  -레코드를 찾기 위한 메서드
+  public abstract int getCount()
+  public abstract boolean moveToNext()
+  public abstract boolean moveToPrevious()
+  public abstract boolean moveToFirst()
+  public abstract boolean moveToLast()
+  public abstract boolean move(int offset)
+  
+  -레코드에 들어 있는 각각의 값을 알아내기 위한 메서드
+  public abstract String getString(int columnIndex)
+  public abstract short getShort(int columnIndex)
+  public abstract int getInt(int columnIndex)
+  public abstract long getLong(int columnIndex)
+  public abstract float getFloat(int columnIndex)
+  public abstract double getDouble(int columnIndex)
+  public abstract byte[] getBlob(int columnIndex)
+  
+○ ☆ 데이터베이스 사용 과정 ☆
+
+        순서          |                       내용                         |      사용 메서드
+1) 데이터베이스 만들기   데이터베이스를 만들면 SQLiteDatabase 객체가 반환됨      openOrCreateDatabase()
+2) 테이블 만들기         'CREATE TABLE ...' SQL을 정의한 후 실행됨              execSQL()
+3) 레코드 추가하기       'INSERT INTO ..." SQL을 정의한 후 실행함               execSQL()
+4) 데이터 조회하기       "SELECT FROM ...' SQL을 정의한 후 실행함               rawQuery()
+                        Cursor 객체가 반환되며 Cursor를 통해 확인한 레코드를
+                        리스트 뷰 등에 표시함
+
+
+
+
+
+
+
+
+
+
+  
