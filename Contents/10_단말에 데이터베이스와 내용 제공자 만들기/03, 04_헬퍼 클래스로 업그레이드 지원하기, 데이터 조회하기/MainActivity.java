@@ -117,6 +117,9 @@ public class MainActivity extends AppCompatActivity {
           // select 구문을 사용해서 반환되는 Cursor 객체를 받기 위해 rawQuery() 메서드를 실행한다.
           // rawQuery() : 결과 값을 Cursor 객체로 받을 수 있는 SQL 실행 방법
           // public Cursor rawQuery (String sql, String[] selectionArgs)
+        
+          // ☆ 데이터를 조회할 때는? -> rawQuery()!! / 데이터를 입력할 때는? -> execSQL()!! ☆
+       
         int recordCount = cursor.getCount();  // 레코드의 전체 개수
         println("레코드 개수 : " + recordCount);
 
