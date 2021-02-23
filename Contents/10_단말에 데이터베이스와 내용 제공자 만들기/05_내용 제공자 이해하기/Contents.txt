@@ -6,3 +6,5 @@
 ○ 내용 제공자는 CRUD 동작을 기준으로 하고 있기 때문에 데이터베이스에 접근하는 것이 일반적이다.
   ○ CRUD : 생성(insert()), 조회(query()), 수정(update()), 삭제(delete())하는 과정
 ○ 내용 제공자에서 허용한 통로로 접근하려면 ContentResolver 객체가 필요하다.
+
+☆ Provider(제공자)에서 제공하는 데이터는 Resolver를 이용해 접근한다. ☆
