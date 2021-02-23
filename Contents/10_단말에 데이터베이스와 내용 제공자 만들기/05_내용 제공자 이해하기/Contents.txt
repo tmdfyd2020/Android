@@ -7,4 +7,9 @@
   ○ CRUD : 생성(insert()), 조회(query()), 수정(update()), 삭제(delete())하는 과정
 ○ 내용 제공자에서 허용한 통로로 접근하려면 ContentResolver 객체가 필요하다.
 
-☆ Provider(제공자)에서 제공하는 데이터는 Resolver를 이용해 접근한다. ☆
+☆ Content Provider(제공자)에서 제공하는 데이터는 Content Resolver를 이용해 접근한다. ☆
+☆ Content Provider는 앱 간의 데이터 공유를 위해 사용된다.
+     특정 앱이 다른 앱의 데이터를 직접 접근해서 사용할 수 없기 때문에 무조건 Content Provider를 통해 다른 앱의 데이터를 사용해야 한다.
+        다른 앱의 데이터를 사용하고자 하는 앱에서는 URI를 이용하여 Content Resolver를 통해 다른 앱의 Content Provider에게 데이터를 요청하게 되는데
+          요청받은 Content Provider는 URI를 확인하고 내부에서 데이터를 꺼내어 Content Resolver에게 전달한다.
+
