@@ -6,3 +6,39 @@
   ○ 3단계 : onDraw() 메서드 내에 사각형을 그리는 메서드를 호출한다.
   ○ 4단계 : onTouchEvent() 메서드 내에 터치 이벤트를 처리하는 코드를 넣는다.
   ○ 5단계 : 새로 만든 뷰를 메인 액티비티에 추가한다.
+
+- 그래픽을 그릴 때 필요한 클래스와 메서드 알아보기 -
+
+○ 그래픽 그릴 때 필요한 주요 클래스
+  ○ 캔버스(Canvas) : 뷰의 표면에 직접 그릴 수 있도록 만들어주는 객체로 그래픽 그리기를 위한 메서드가 정의되어 있다.
+  ○ 페인트(Paint) : 그래픽 그리기를 위해 필요한 색상 등의 속성을 담고 있다.
+  ○ 비트맵(Bitmap) : 픽셀로 구성된 이미지로 메모리에 그래픽을 그리는데 사용한다.
+  ○ 드로어블 객체(Drawable) : 사각형, 이미지 등의 그래픽 요소가 객체로 정의되어 있다.
+  
+- 클리핑(clipping) -
+
+○ 그리기 연산이 일어나는 영역을 설정하는 것
+○ clipRect(), clipRegion() : 클리핑 영역을 설정할 수 있다.
+○ 즉, drawRect() 메서드는 온전한 사각형을 그리지만, clipRect() 메서드는 지정된 부분이 아니라면 실제로 그려지지 않는다.
+
+- 캔버스 객체로 호출할 수 있는 대표적인 메서드 -
+
+○ 점 그리기
+  : void drawPoint(float x, float y, Paint paint) 하나의 점을 그린다. drawPoints()를 이용하면 여러 개의 점을 그릴 수 있다.
+○ 선 그리기
+  : void drawLine(float startX, float startY, float stopX, float stopY, Paint paint) 두 점의 X, Y 좌표 값을 이용해 선을 그린다.
+    drawLines()를 이용하면 여러 개의 선을 그릴 수 있다.
+○ 사각형 그리기
+  : void drawRect(float left, float top, float right, float bottom, Paint paint) 모서리의 좌표 값을 이용해 사각형을 그린다.
+○ 둥근 모서리의 사각형 그리기
+  : void drawRoundRect(RectF rect, float rx, float ry, Paint paint) 사각 영역과 모서리 부분 타원의 반지름 값을 이용해 둥근 모서리의 사각형을 그린다.
+○ 원 그리기
+  : void drawCircle(float cs, float cy, float radius, Paint paint) 원의 중앙 좌표 값과 반지름을 이용해 원을 그린다.
+○ 타원 그리기
+  : void drawOval(RectF oval, Paint paint) 사각 영역을 이용해 타원을 그린다.
+○ 아크 그리기
+  : void drawArc(RectF oval, float startAngle, float sweepAngle, boolean useCenter, Paint paint) 사각 영역과 각도를 이용해 아크를 그린다.
+○ 패스 그리기
+  : void drawPath(Path paht, Paint paint) 패스 정보를 이용해 연결선 또는 부드러운 곡선을 그린다.
+○ 비트맵 그리기
+  : void drawBitmap(Bitmap bitmap, float left, float top, Paint paint) 비트맵 이미지를 주어진 좌표 값에 그린다.
