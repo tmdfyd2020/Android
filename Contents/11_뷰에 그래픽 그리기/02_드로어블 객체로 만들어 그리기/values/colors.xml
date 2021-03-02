@@ -1,11 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
+    <color name="color01">#FF000000</color>
+    <color name="color02">#FF888888</color>
+    <color name="color03">#FF333333</color>
+    <!--
+        AA : 색상의 알파 값 / 0에 가까워질수록 투명해지고, 255(FF)에 가까워질수록 불투명해진다.
+        RR : 빨간색
+        GG : 녹색
+        BB : 파란색
+    -->
 </resources>
