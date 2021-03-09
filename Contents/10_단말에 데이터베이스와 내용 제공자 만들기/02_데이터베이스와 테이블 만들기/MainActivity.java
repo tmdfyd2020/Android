@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
         println("createDatabase 호출됨.");
 
         database = openOrCreateDatabase(name, MODE_PRIVATE, null);  // 데이터베이스를 만들기 위한 메서드 실행하기
-        // 설명 -> Contents.txt
+        // ○ parameter 1 : 데이터베이스 이름, 데이터베이스 파일의 이름으로도 사용된다.
+        // ○ parameter 2 : 사용 모드 -> MODE_PRIVATE 상수를 넣어주자!
+        // ○ parameter 3 : NULL이 아닌 객체를 지정할 경우 쿼리의 결과 값으로 반환되는 데이터를 참조하는 커서를 만들어낼 수 있는 개체가 전달된다.
         println("데이터베이스 생성함 : " + name);
     }
 
