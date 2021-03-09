@@ -60,16 +60,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void createDatabase(String name) {
-        println("createDatabase 호출됨.");
 
         dbHelper = new DatabaseHelper(this);
         database = dbHelper.getWritableDatabase();
 
-        println("데이터베이스 생성함 : " + name);
+        println("데이터베이스가 생성되었습니다.\n데이터베이스의 이름은 " + name + "입니다.\n");
     }
 
     private void createTable(String name) {
-        println("createTable 호출됨.");
 
         if (database == null) {
             println("데이터베이스를 먼저 생성하세요.");
@@ -82,11 +80,10 @@ public class MainActivity extends AppCompatActivity {
             + " age integer, "
             + " mobile text)");
 
-        println("테이블 생성함 : " + name);
+        println("테이블이 생성되었습니다.\n테이블의 이름은 " + name + "입니다\n");
     }
 
     private void insertRecord() {
-        println("insertRecord 호출됨.");
 
         if (database == null) {
             println("데이터베이스를 먼저 생성하세요.");
@@ -101,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
         database.execSQL("insert into " + tableName
                         + "(name, age, mobile) "
                         + " values "
-                        + "('John', 20, '010-1000-1000')");
+                        + "('Ryong', 27, '010-1000-1000')");
 
-        println("레코드 추가함.");
+        println("레코드가 추가되었습니다.");
     }
 
     public void println(String data) {
@@ -111,19 +108,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void executeQuery() {
-        println("executeQuery 호출됨.");
 
         Cursor cursor = database.rawQuery("select _id, name, age, mobile from emp", null); // SQL 실행하고 Cursor 객체 반환하기
           // select 구문을 사용해서 반환되는 Cursor 객체를 받기 위해 rawQuery() 메서드를 실행한다.
           // rawQuery() : 결과 값을 Cursor 객체로 받을 수 있는 SQL 실행 방법
           // public Cursor rawQuery (String sql, String[] selectionArgs)
-        
-          // ☆ 데이터를 조회할 때는? -> rawQuery()!! / 데이터를 입력할 때는? -> execSQL()!! ☆
-       
         int recordCount = cursor.getCount();  // 레코드의 전체 개수
         println("레코드 개수 : " + recordCount);
 
-        for (int i = 0; i < recordCount; i++) {
+        for (int i = 0; i < recordCount; i++) {  // Cursor 객체는 처음에는 아무런 레코드를 가리키지 않으며
             cursor.moveToNext();  // 다음 결과 레코드로 넘어가기
 
             int id = cursor.getInt(0);
