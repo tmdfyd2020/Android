@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="sdcard" path="."/>
+</paths> <!--
+○ external.xml 파일 안에 있는 코드를 <paths> 태그로 수정한다.
+  이 태그는 <external-path> 태그를 포함하고 있으며 특정 폴더를 현재 폴더로 인식하도록 한다.
+-->
