@@ -1,0 +1,10 @@
+- 유튜브 영상 재생하기 -
+
+○ 왼쪽 프로젝트 창을 [ Android ] 대신 [ Project Files ] 로 변경한다.
+
+○ 아래의 주소에서 YouTube API를 제공하는 아래 사이트에서 jar 파일을 다운받을 수 있다.
+  https://developers.google.com/youtube/android/player/downloads/
+○ 다운로드 받은 jar파일을 왼쪽 프로젝트 창에 보이는 /app/libs 폴더 안으로 복사해서 넣는다.
+
+○ 구글 콘솔 사이트에서 유튜브 동영상 재생을 위한 키 값을 발급받아야 한다.
+  https://console.developers.google.com/apis
