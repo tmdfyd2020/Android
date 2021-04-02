@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내 위치 요청하기" />
+
+    <!-- 지도를 보여주기 위한 프래그먼트 태그 추가하기 -->
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" /> <!--
+        appcompat 라이브러리를 사용할 때는 SupportMapFragment를 사용하지만 예전 버전의 안드로이드를 지원할 필요가
+        없다면 MapFragment를 사용할 수도 있다. 하지만 일반적으로는 SupportMapFragment를 사용한다. -->
+
+</LinearLayout>
