@@ -1,0 +1,12 @@
+- 다중 창 지원하기 -
+
+○ 다중 창 모드로 들어갔을 때는 액티비티가 보이는 영역이 줄어들기 때문에 화면 레이아웃을 변경해야 할 수도 있다.
+○ 이런 문제를 해결할 수 있도록 다음과 같은 메서드가 제공된다.
+  - public boolean isInMultiWindowMode()
+    현재 다중 창 모드에 들어가 있는지를 확인할 수 있다.
+    
+  - public boolean isInPictureInPictureMode()
+    PIP모드(큰 화면에 작은 화면이 보이는 모드)에 들어가 있는지 확인할 수 있다.
+    
+  - public void onMultiWindowModeChanged(boolean isInMultiWindowMode, Configuration newConfig)
+    다중 창 모드로 변경될 때마다 즉시 PIP모드에 들어가 있는지 확인할 수 있다. 이 메서드는 다중 창 모드로 변경될 때마다 자동 호출된다.
